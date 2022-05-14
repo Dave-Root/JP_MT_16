@@ -6,16 +6,19 @@
 
 /*classes*/
 
-Person Person1 = new Person() { Age=15};
+Person Person1 = new Person(15) { Name="John", };
 
 Person1.TellMeYourId();
-Person1.Name = "John";
 
 
-Person Person2 = new Person();
+Console.WriteLine($"are you adult?  {Person1.IsAdult()}");
+
+Person Person2 = new Person(20) { };
 
 Person2.TellMeYourId();
 Person2.Name = "Anna";
+
+Console.WriteLine($"are you adult?  {Person2.IsAdult()}");
 
 
 

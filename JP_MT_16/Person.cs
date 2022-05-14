@@ -8,9 +8,17 @@ namespace JP_MT_16
 {
     internal class Person
     {
-        private int Id { get; } =new Random().Next(1,100);
+        private int Id { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
+
+
+        public Person(int age)
+        {
+            Id = new Random().Next(1, 100);
+           
+            Age = age;
+        }
 
         public void TellMeYourId()
         {
@@ -23,9 +31,7 @@ namespace JP_MT_16
             if(Age>17)
                 return true;
             else
-            {
-        return false;
-            }
+                return false;
         }
     }
 }
