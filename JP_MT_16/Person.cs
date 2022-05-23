@@ -10,14 +10,12 @@ namespace JP_MT_16
     {
         private int Id { get; set; }
         public string Name { get; set; }
-        public int Age { get; set; }
-
+        public  int Age { get; set; }
 
         public Person(int age)
         {
-            Id = new Random().Next(1, 100);
-           
             Age = age;
+            Id = new Random().Next(1, 100);
         }
 
         public void TellMeYourId()
@@ -33,5 +31,23 @@ namespace JP_MT_16
             else
                 return false;
         }
+
+        public static double Factorial(int number)
+        {
+            
+            if (number == 0)
+                return 1;
+           
+
+            double factorial = 1;
+            for(int i = number; i>= 1; i--)
+            {
+                factorial *= i;
+            }
+
+            
+            return factorial;
+        }
+
     }
 }

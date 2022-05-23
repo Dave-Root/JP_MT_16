@@ -1,5 +1,67 @@
 ﻿using JP_MT_16;
+using System.Text;
+using System.Net;
 
+
+string manyLines = @"This is line one dfggfd
+This is line twogfdg
+Here is line threegfd
+The penultimate line is line four
+This is the final, fifth line. ";
+
+
+Console.WriteLine();
+
+Console.WriteLine("--------------------------------------------------------");
+
+
+var builder = new StringBuilder();
+builder.AppendLine("dasdadsadas");
+builder.AppendLine("dadfgdfgfdgfdgdf");
+
+Color c = new Color();
+
+
+c.CreateNewColor();
+
+Console.WriteLine(c.ToString());
+
+
+
+
+
+
+Console.WriteLine();
+
+
+/*using (var reader = new StringReader(manyLines))
+{
+    string? item;
+    do
+    {
+        item = reader.ReadLine();
+        Console.WriteLine(item);
+    } while (item != null);
+}*/
+
+//manyLines=manyLines.Substring(5, 10);
+manyLines=manyLines.Insert(5, "dadsadsdasdas") ;
+
+var chars= manyLines.Take(10);
+
+/*foreach (char c in chars)
+{
+    Console.WriteLine(c);
+}*/
+
+Console.WriteLine(manyLines);
+
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+
+
+Console.WriteLine("factorial is:" + Person.Factorial(5)); ;
 
 
 
@@ -11,14 +73,16 @@ Person Person1 = new Person(15) { Name="John", };
 Person1.TellMeYourId();
 
 
-Console.WriteLine($"are you adult?  {Person1.IsAdult()}");
+Console.WriteLine($"{Person1.Name} are you adult?  {Person1.IsAdult()}");
+
+//Console.WriteLine( "factorial is:"+Person1.Factorial(4)); ;
 
 Person Person2 = new Person(20) { };
 
 Person2.TellMeYourId();
 Person2.Name = "Anna";
 
-Console.WriteLine($"are you adult?  {Person2.IsAdult()}");
+Console.WriteLine($"{Person2.Name} are you adult?  {Person2.IsAdult()}");
 
 
 
